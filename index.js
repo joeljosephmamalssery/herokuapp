@@ -10,7 +10,7 @@ app.use(
 );
 morgan.token('body', (req, res) => JSON.stringify(req.body));
 app.use(morgan(':method :url :status :response-time ms :body'));
-app.get('/a', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(
     '/Users/joeljoseph/Documents/fullstack/Part-3-heoku/build/index.html'
   );
