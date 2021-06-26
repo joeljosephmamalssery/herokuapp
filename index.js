@@ -5,15 +5,11 @@ const app = express();
 app.use(express.json());
 const cors = require('cors');
 app.use(cors());
-app.use(
-  express.static('/Users/joeljoseph/Documents/fullstack/Part-3-heoku/build')
-);
+app.use(express.static(__dirname + '/build'));
 morgan.token('body', (req, res) => JSON.stringify(req.body));
 app.use(morgan(':method :url :status :response-time ms :body'));
 app.get('/', (req, res) => {
-  res.sendFile(
-    '/Users/joeljoseph/Documents/fullstack/Part-3-heoku/build/index.html'
-  );
+  res.sendFile(__dirname + '/build/index.html');
   // res.send('Hello World!');
 });
 const generateId = () => {
