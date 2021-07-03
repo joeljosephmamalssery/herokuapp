@@ -13,3 +13,6 @@ Content-Type: application/json
 "name": "Joeli",
 "number": "74743374"
 }
+###
+
+GET http://localhost:3000/
